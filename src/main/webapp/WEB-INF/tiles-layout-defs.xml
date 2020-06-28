@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="webTemplateBasic" template="/jsp/template/tiles/TilesTemplateBasic.jsp">
+		<put-attribute name="BodyContent" value="BodyContent" />
+	</definition>
+	<definition name="webTemplateLogin" template="/jsp/template/tiles/TilesTemplateLogin.jsp">
+		<put-attribute name="PageTitle"   value="PageTitle" />
+		<put-attribute name="BodyContent" value="BodyContent" />
+	</definition>
+	<definition name="webTemplateDashboard" template="/jsp/template/tiles/TilesTemplateDashboard.jsp">
+		<put-attribute name="PageTitle"  value="PageTitle" />
+		<put-attribute name="PageCss"    value="PageCss" />
+		<put-attribute name="TopMenuBar" value="TopMenuBar" />
+		<put-attribute name="PageHeader" value="PageHeader" />
+		<put-attribute name="PageBody"   value="PageBody" />
+		<put-attribute name="PageJs"     value="PageJs" />
+	</definition>
+	<definition name="webTemplateWorkflow" template="/jsp/template/tiles/TilesTemplateWorkflow.jsp">
+		<put-attribute name="PageTitle"        value="PageTitle" />
+		<put-attribute name="PageCss"          value="PageCss" />
+		<put-attribute name="TopMenuBar"       value="TopMenuBar" />
+		<put-attribute name="PageHeader"       value="PageHeader" />
+		<put-attribute name="LaunchPad"        value="LaunchPad" />
+		<put-attribute name="WorkflowTabPanel" value="WorkflowTabPanel" />
+		<put-attribute name="PageBody"         value="PageBody" />
+		<put-attribute name="PageJs"           value="PageJs" />
+	</definition>
+	<definition name="GLOBAL_SYSTEM_ERROR_PAGE" extends="webTemplateBasic">
+		<put-attribute name="BodyContent" value="/jsp/default/error/systemErrorBodyContent.jsp" />
+	</definition>
+	<definition name="SYSTEM_LEFT_MENU_BAR_FRAGMENT_PAGE" extends="webTemplateBasic">
+		<put-attribute name="BodyContent" value="/jsp/default/common/commonLeftNavigationMenuBar.jsp" />
+	</definition>
+	<definition name="USER_LOGIN_FORM_PAGE" extends="webTemplateLogin">
+		<put-attribute name="PageTitle"   value="NIKE.COM.GC | PlannerPortal - User Login" />
+		<put-attribute name="BodyContent" value="/jsp/default/login/userLoginFormBodyContent.jsp" />
+	</definition>
+	<definition name="USER_DASHBOARD_HOME_PAGE" extends="webTemplateDashboard">
+		<put-attribute name="PageTitle"  value="NIKE.COM.GC | PlannerPortal - User Dashboard" />
+		<put-attribute name="PageCss"    value="/jsp/default/dashboard/userDashboardPageCss.jsp" />
+		<put-attribute name="TopMenuBar" value="/jsp/default/common/commonTopMenuBar.jsp" />
+		<put-attribute name="PageHeader" value="/jsp/default/dashboard/userDashboardPageHeader.jsp" />
+		<put-attribute name="PageBody"   value="/jsp/default/dashboard/userDashboardPageBody.jsp" />
+		<put-attribute name="PageJs"     value="/jsp/default/dashboard/userDashboardPageJs.jsp" />
+	</definition>
+	<definition name="STAFF_MOCK_TEST_HOME_PAGE" extends="webTemplateWorkflow">
+		<put-attribute name="PageTitle"        value="NIKE.COM.GC | PlannerPortal - Staff Mocking - Home" />
+		<put-attribute name="PageCss"          value="/jsp/default/staffmock/staffMockTestPageCss.jsp" />
+		<put-attribute name="TopMenuBar"       value="/jsp/default/common/commonTopMenuBar.jsp" />
+		<put-attribute name="PageHeader"       value="/jsp/default/staffmock/staffMockTestPageHeader.jsp" />
+		<put-attribute name="LaunchPad"        value="/jsp/default/staffmock/staffMockTestLaunchPad.jsp" />
+		<put-attribute name="WorkflowTabPanel" value="/jsp/default/staffmock/staffMockTestWorkflowTabPanel.jsp" />
+		<put-attribute name="PageBody"         value="/jsp/default/staffmock/staffMockTestPageBody.jsp" />
+		<put-attribute name="PageJs"           value="/jsp/default/staffmock/staffMockTestPageJs.jsp" />
+	</definition>
+	<definition name="ASSORTMENT_PLAN_HOME_PAGE" extends="webTemplateWorkflow">
+		<put-attribute name="PageTitle"        value="NIKE.COM.GC | PlannerPortal - Assortment Plan - Home" />
+		<put-attribute name="PageCss"          value="/jsp/default/assortment/assortmentPlanPageCss.jsp" />
+		<put-attribute name="TopMenuBar"       value="/jsp/default/common/commonTopMenuBar.jsp" />
+		<put-attribute name="PageHeader"       value="/jsp/default/assortment/assortmentPlanPageHeader.jsp" />
+		<put-attribute name="LaunchPad"        value="/jsp/default/assortment/assortmentPlanLaunchPad.jsp" />
+		<put-attribute name="WorkflowTabPanel" value="/jsp/default/assortment/assortmentPlanWorkflowTabPanel.jsp" />
+		<put-attribute name="PageBody"         value="/jsp/default/assortment/assortmentPlanPageBody.jsp" />
+		<put-attribute name="PageJs"           value="/jsp/default/assortment/assortmentPlanPageJs.jsp" />
+	</definition>
+	<definition name="BUY_PLAN_T2D_HOME_PAGE" extends="webTemplateWorkflow">
+		<put-attribute name="PageTitle"        value="NIKE.COM.GC | PlannerPortal - Buy Plan T2D - Home" />
+		<put-attribute name="PageCss"          value="/jsp/default/buyplan/buyPlanT2dPageCss01.jsp" />
+		<put-attribute name="TopMenuBar"       value="/jsp/default/common/commonTopMenuBar.jsp" />
+		<put-attribute name="PageHeader"       value="/jsp/default/buyplan/buyPlanT2dPageHeader01.jsp" />
+		<put-attribute name="LaunchPad"        value="/jsp/default/buyplan/buyPlanT2dLaunchPad.jsp" />
+		<put-attribute name="WorkflowTabPanel" value="/jsp/default/buyplan/buyPlanT2dWorkflowTabPanel.jsp" />
+		<put-attribute name="PageBody"         value="/jsp/default/buyplan/buyPlanT2dPageBody01.jsp" />
+		<put-attribute name="PageJs"           value="/jsp/default/buyplan/buyPlanT2dPageJs01.jsp" />
+	</definition>
+</tiles-definitions>
